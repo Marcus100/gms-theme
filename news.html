@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Eugine Whint" />
+    <meta
+      name="description"
+      content="The Grenada Meteorological Service provide weather, climate and disaster information for public, private, aviation and government needs."
+    />
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+
+    <title>Grenada Meteorological Service</title>
+  </head>
+
+  <body
+    class="antialiased bg-gradient-to-r from-[#6E95C0] via-[#89A7C9] to-[#9FB5CD] text-gray-100"
+  >
+    <!-- HEADER & NAVIGATION -->
+    <header class="sticky top-0 md:static">
+      <nav class="bg-sky-800 text-gray-100 pl-3 pr-3">
+        <div class="container">
+          <div class="flex justify-between max-w-5xl mx-auto">
+            <div class="z-40 flex py-1">
+              <div>
+                <a href="/" class="flex items-center lg:p-1">
+                  <img
+                    src="/static/images/logos/gmslogo.png"
+                    alt=""
+                    class="w-14 lg:w-20"
+                  />
+                  <p
+                    class="pl-2 font-bold tracking-wide text-2xl hover:text-orange-400 lg:text-3xl"
+                  >
+                    Grenada Met Service
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <!-- DESKTOP NAVIGATION MENU -->
+            <div
+              class="hidden md:flex items-center justify-center space-x-5 lg:space-x-10 lg:text-2xl"
+            >
+              <a href="/">Weather</a>
+              <a href="/alerts/">Alerts</a>
+              <a href="/outlook/">Outlook</a>
+              <a href="/contactus/">Contact Us</a>
+              <a href="/">More</a>
+            </div>
+
+            <!-- MOBILE BUTTON -->
+            <div class="pt-7 md:hidden">
+              <button
+                id="menu-btn"
+                type="button"
+                class="z-30 block hamburger md:hidden focus:outline-none"
+              >
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE NAVIGATION MENU-->
+        <div
+          id="menu"
+          class="z-20 fixed inset-0 hidden flex-col items-center self-end w-full h-full m-h-screen pt-16 pb-0 tracking-widest text-gray-100 uppercase bg-sky-900"
+        >
+          <a
+            href="/"
+            class="hover:text-orange-400 border-b-2 border-b-orange-500 text-xl"
+            >WEATHER</a
+          >
+          <a href="/alerts/" class="hover:text-orange-400 text-base">Alerts</a>
+          <a href="/" class="hover:text-orange-400 text-base"
+            >Current Weather</a
+          >
+          <div class="flex">
+            <a href="/" class="hover:text-orange-400 text-base">Monday</a>
+            <span class="text-orange-600 px-1">/</span>
+            <a href="/" class="hover:text-orange-400 text-base">Tuesday</a>
+          </div>
+          <div class="flex">
+            <a href="/" class="hover:text-orange-400 text-base">Wednesday</a>
+            <span class="text-orange-600 px-1">/</span>
+            <a href="/" class="hover:text-orange-400 text-base">Thursday</a>
+          </div>
+
+          <a href="/" class="hover:text-orange-400 text-base">Marine</a>
+
+          <a
+            href="/"
+            class="hover:text-orange-400 border-b-2 border-b-orange-500 text-xl mt-4"
+            >Products & Services</a
+          >
+          <a href="/outlook/" class="hover:text-orange-400 text-base"
+            >Tropical Weather Outlook</a
+          >
+          <a href="#" class="hover:text-orange-400 text-base">Reports</a>
+          <a href="#" class="hover:text-orange-400 text-base">Climate</a>
+
+          <a
+            href="#"
+            class="hover:text-orange-400 border-b-2 border-b-orange-500 text-xl mt-4"
+            >Resources</a
+          >
+          <a href="#" class="hover:text-orange-400 text-base">Glossary</a>
+          <a href="#" class="hover:text-orange-400 text-base">FAQs</a>
+          <a href="/posts/" class="hover:text-orange-400 text-base">Posts</a>
+          <a href="/usefullinks/" class="hover:text-orange-400 text-base"
+            >Useful Links</a
+          >
+
+          <a
+            href="/aboutus/"
+            class="hover:text-orange-400 border-b-2 border-b-orange-500 text-xl mt-4"
+            >About Us</a
+          >
+
+          <a
+            href="/contactus/"
+            class="hover:text-orange-400 border-b-2 border-b-orange-500 text-xl mt-4"
+            >Contact Us</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="items-center justify-center mx-auto">
+      <!-- ALERTS AND ADVISORIES SECTION -->
+      <section class="mx-3">
+        <div
+          class="bg-green-100 border border-green-400 text-green-700 rounded mt-2 mx-auto p-1 text-base lg:text-xl md:max-w-xl lg:mt-5 lg:max-w-4xl"
+          role="alert"
+        >
+          <div class="mx-auto grid grid-cols-2">
+            <div>
+              <strong class="font-bold text-green-600">1 Warning!</strong>
+              <strong class="font-bold text-green-600">2 Advisories!</strong>
+            </div>
+            <div class="justify-self-end">
+              <a href="/alerts/">
+                <strong class="font-bold text-green-600">View all</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        style="
+          background-image: url(/static/images/bgimage/wxhome.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+        class="mt-2 "
+      >
+        <section class="px-5 py-1 mx-auto">
+          <div class="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
+            
+                        <!-- Weather -->
+                        <div
+                        class="border border-red-500 relative flex col-span-12 lg:col-span-6 lg:order-2" id="tabs"
+                      >
+                        
+                        
+                          <!-- TABS/PANELS CONTAINER -->
+                          <div
+                            class="container max-w-3xl lg:max-w-4xl text-gray-200 mx-auto"
+                          >
+                            <!-- TABS FLEX CONTAINER -->
+                            <div
+                              class="flex justify-between border rounded p-2 pt-0 uppercase items-center text-base bg-sky-900 border-gray-300 bg-opacity-90 mx-auto lg:text-xl"
+                            >
+                              <!-- TAB 1: CURRENT WEATHER -->
+                              <div
+                                class="flex justify-center items-center text-center cursor-pointer hover:text-orange-400 tab"
+                                data-target="panel-1"
+                              >
+                                <div class="pt-2 uppercase" data-target="panel-1">
+                                  Now
+                                </div>
+                              </div>
+          
+                              <!-- TAB 2: FORECAST: DAY 1 -->
+                              <div
+                                class="flex justify-center text-center cursor-pointer md:border-b-0 hover:text-orange-400 tab"
+                                data-target="panel-2"
+                              >
+                                <div class="pt-2 uppercase" data-target="panel-2">
+                                  Today
+                                </div>
+                              </div>
+          
+                              <!-- TAB 3: FORECAST: DAY 2 -->
+                              <div
+                                class="flex justify-center text-center cursor-pointer hover:text-orange-400 tab"
+                                data-target="panel-3"
+                              >
+                                <div class="pt-2 uppercase" data-target="panel-3">
+                                  Tmrw
+                                </div>
+                              </div>
+                              <!-- TAB 4: FORECAST: DAY 3 -->
+                              <div
+                                class="flex justify-center text-center cursor-pointer hover:text-orange-400 tab"
+                                data-target="panel-4"
+                              >
+                                <div class="pt-2 uppercase" data-target="panel-4">
+                                  Fri
+                                </div>
+                              </div>
+                              <!--TAB 5: FORECAST: DAY 4 -->
+                              <div
+                                class="flex justify-center text-center cursor-pointer md:border-b-0 hover:text-orange-400 tab"
+                                data-target="panel-5"
+                              >
+                                <div class="pt-2 uppercase" data-target="panel-5">
+                                  Sat
+                                </div>
+                              </div>
+          
+                              <!-- TAB 6: MARINE BULLETIN -->
+                              <div
+                                class="flex justify-center text-center cursor-pointer hover:text-orange-400 tab"
+                                data-target="panel-6"
+                              >
+                                <div class="pt-2 uppercase" data-target="panel-6">
+                                  Marine
+                                </div>
+                              </div>
+                            </div>
+          
+                            <!-- TAB PANELS -->
+                            <div
+                              id="panels"
+                              class="container text-base my-2 pb-2 px-2 border rounded bg-sky-900 border-gray-300 bg-opacity-60 mx-auto"
+                            >
+                              <!-- PANEL 1: HOURLY -->
+                              <div class="flex flex-col panel panel-1">
+                                <!-- PANEL CONTENT -->
+                                <div class="flex flex-col">
+                                  <!-- LAST UPDATED -->
+                                  <div>
+                                    <p class="text-right pr-1 text-sm pt-1 font-light">
+                                      Last updated: 8:00 AM LST
+                                    </p>
+                                  </div>
+                                  <div class="flex flex-col items-center">
+                                    <!-- FLEX BOX 1 -->
+                                    <div class="flex justify-evenly items-center">
+                                      <div class="w-1/3">
+                                        <p class="text-3xl text-center">Fair</p>
+                                      </div>
+                                      <div class="w-1/3">
+                                        <img
+                                          src="/static/images/meteocons/clear-day.svg"
+                                          alt=""
+                                          class="w-48"
+                                        />
+                                      </div>
+                                      <div class="w-1/3">
+                                        <p class="text-4xl text-center">30.4&deg;C</p>
+                                      </div>
+                                    </div>
+                                    <!-- FLEXBOX 2 -->
+                                    <div>
+                                      <div class="flex">
+                                        <p class="text-2xl">Slight Haze</p>
+                                        <div>
+                                          <!-- Dew Point SVG -->
+                                          <img
+                                            src="/static/images/meteocons/haze.svg"
+                                            alt=""
+                                            class="w-12"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- FLEXBOX 3 -->
+                                  <div class="flex items-center justify-around pb-2 mt-3">
+                                    <!-- Flex Left -->
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Dew Point SVG -->
+                                          <img
+                                            src="/static/images/meteocons/thermometer-raindrop.svg"
+                                            alt=""
+                                            class="w-12"
+                                          />
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            25.3 &deg;C
+                                          </p>
+                                          <p class="text-sm leading-none">Dew Point</p>
+                                        </div>
+                                      </div>
+          
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Humidity SVG -->
+                                          <img
+                                            src="/static/images/meteocons/humidity.svg"
+                                            alt=""
+                                            class="w-14"
+                                          />
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            74%
+                                          </p>
+                                          <p class="text-sm leading-none">Humidity</p>
+                                        </div>
+                                      </div>
+          
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- UV Index SVG -->
+                                          <img
+                                            src="/static/images/meteocons/uv-index.svg"
+                                            alt=""
+                                            class="w-12"
+                                          />
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            37.2 &deg;C
+                                          </p>
+                                          <p class="text-sm leading-none">UV Index</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- Flex Right -->
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Wind SVG -->
+                                          <img
+                                            src="/static/images/meteocons/wind.svg"
+                                            alt=""
+                                            class="w-12"
+                                          />
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            25.3 &deg;C
+                                          </p>
+                                          <p class="text-sm leading-none">Wind</p>
+                                        </div>
+                                      </div>
+          
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Visibility SVG -->
+                                          <img
+                                            src="/static/images/meteocons/visibility.svg"
+                                            alt=""
+                                            class="w-14"
+                                          />
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            74%
+                                          </p>
+                                          <p class="text-sm leading-none">Visibility</p>
+                                        </div>
+                                      </div>
+          
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Barometer SVG -->
+                                          <img
+                                            src="/static/images/meteocons/barometer.svg"
+                                            alt=""
+                                            class="w-12"
+                                          />
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            37.2 &deg;C
+                                          </p>
+                                          <p class="text-sm leading-none">Pressure</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+          
+                              <!-- PANEL 2: DAY 1 -->
+                              <div class="flex flex-col hidden panel panel-2">
+                                <!-- PANEL CONTENT -->
+                                <!-- VALIDITY -->
+                                <div>
+                                  <p class="text-right pr-1 text-sm pt-1 font-light">
+                                    Validity: 6:00 p.m to 6:00 a.m. (12 hrs)
+                                  </p>
+                                </div>
+          
+                                <!-- IMAGE, TIME AND TEMP -->
+                                <div class="mt-2">
+                                  <div class="flex text-xl justify-around">
+                                    <div class="flex flex-col">
+                                      <div>
+                                        <div class="flex">
+                                          <p class="pr-1 text-3xl">32.6&deg;C</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Day</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Night</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div class="flex flex-col">
+                                      <div></div>
+                                      <div>
+                                        <div>
+                                          <div class="flex">
+                                            <p class="pr-1 pt-2 text-3xl">25.5&deg;C</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WEATHER FORECAST -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Weather SVG -->
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        class="w-7 fill-current text-gray-200"
+                                      >
+                                        <path
+                                          d="M6.316 21H5.212l.935-2h1.105zm2.065 2 1.871-4H9.147l-1.87 4zm3.468-1 1.403-3h-1.105l-1.403 3zm3.298-3-2.339 5h1.105l2.339-5zm3 0-.935 2h1.104l.936-2zm-11.28-1h-1.43a3.438 3.438 0 0 1 0-6.875l.012.001A3.369 3.369 0 0 1 9.4 9.24a5.494 5.494 0 0 1 10.548-.521A4.807 4.807 0 0 1 18.187 18zM3 14.562A2.44 2.44 0 0 0 5.438 17h12.75a3.807 3.807 0 0 0 1.394-7.351l-.429-.17-.15-.436a4.494 4.494 0 0 0-8.629.426l-.232.99-.986-.25a2.407 2.407 0 0 0-.594-.084 2.443 2.443 0 0 0-2.206 1.42l-.268.581h-.715A2.442 2.442 0 0 0 3 14.563z"
+                                        ></path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Generally fair, becoming partly cloudy at times,
+                                        with the isolated shower.
+                                      </p>
+                                      <p class="text-xs leading-none">Weather</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WIND -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xml:space="preserve"
+                                        viewBox="0 0 64 64"
+                                        class="w-7 stroke-gray-200"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke-miterlimit="10"
+                                          stroke-width="4"
+                                        >
+                                          <circle cx="32" cy="32" r="31"></circle>
+                                          <circle cx="32" cy="32" r="4"></circle>
+                                          <path
+                                            d="M23.515 23.515C18.828 28.201 15 48.999 15 48.999s20.799-3.827 25.485-8.514c4.687-4.688 4.686-12.285 0-16.971-4.685-4.686-12.284-4.687-16.97.001z"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        SE'ly @ 05 - 15 mph, becoming variable to calm at
+                                        times.
+                                      </p>
+                                      <p class="text-xs leading-none">Wind</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SEAS -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Seas SVG -->
+                                      <svg
+                                        class="w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 -3.18 20.402 20.402"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
+                                          ></path>
+                                          <path
+                                            d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
+                                            data-name="primary"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Moderate, with waves 4 to 6 feet in open waters.
+                                      </p>
+                                      <p class="text-xs leading-none">Seas</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- TIDES -->
+                                <div>
+                                  <div class="flex">
+                                    <div class="w-1/2">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Low Tide SVG -->
+                                          <svg
+                                            class="w-10 h-10 fill-current text-gray-100"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="800"
+                                            height="800"
+                                            viewBox="0 0 20 20"
+                                          >
+                                            <g
+                                              fill="none"
+                                              stroke="#f7fafc"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path d="M10 1v6" />
+                                              <path
+                                                d="m8 5 2 2 2-2M1 18.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 14.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 10.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5"
+                                                data-name="primary"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            8:45 pm
+                                          </p>
+                                          <p class="text-sm leading-none">Low Tide</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="w-1/2">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- High Tide SVG -->
+                                          <svg
+                                            class="w-10 h-10 fill-current text-gray-100"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                          >
+                                            <g
+                                              fill="none"
+                                              stroke="#f7fafc"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path d="M10 7V1" />
+                                              <path
+                                                d="m12 3-2-2-2 2M1 18.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 14.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 10.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5"
+                                                data-name="primary"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            2:45 am
+                                          </p>
+                                          <p class="text-sm leading-none">High Tide</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SUNSET AND SUNRISE -->
+                                <div>
+                                  <div class="flex">
+                                    <div class="w-1/2">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunrise SVG -->
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="w-9 fill-current text-gray-200"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 am
+                                          </p>
+                                          <p class="text-sm leading-none">Sunrise</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ml-5 w-1/2">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunset -->
+                                          <svg
+                                            class="w-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              stroke="#e5e7eb"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 pm
+                                          </p>
+                                          <p class="text-sm leading-none">Sunset</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+          
+                              <!-- PANEL 3: DAY 2 -->
+                              <div class="flex flex-col hidden panel panel-3">
+                                <!-- PANEL CONTENT -->
+                                <!-- VALIDITY -->
+                                <div>
+                                  <p class="text-right pr-1 text-sm pt-1 font-light">
+                                    Validity: 6:00 a.m to 6:00 a.m. (24 hrs)
+                                  </p>
+                                </div>
+          
+                                <!-- IMAGE, TIME AND TEMP -->
+                                <div class="mt-2">
+                                  <div class="flex text-xl justify-around">
+                                    <div class="flex flex-col">
+                                      <div>
+                                        <div class="flex">
+                                          <p class="pr-1 text-3xl">31.5&deg;C</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Day</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Night</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div class="flex flex-col">
+                                      <div></div>
+                                      <div>
+                                        <div>
+                                          <div class="flex">
+                                            <p class="pr-1 pt-2 text-3xl">26.0&deg;C</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WEATHER FORECAST -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Weather SVG -->
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        class="w-7 fill-current text-gray-200"
+                                      >
+                                        <path
+                                          d="M6.316 21H5.212l.935-2h1.105zm2.065 2 1.871-4H9.147l-1.87 4zm3.468-1 1.403-3h-1.105l-1.403 3zm3.298-3-2.339 5h1.105l2.339-5zm3 0-.935 2h1.104l.936-2zm-11.28-1h-1.43a3.438 3.438 0 0 1 0-6.875l.012.001A3.369 3.369 0 0 1 9.4 9.24a5.494 5.494 0 0 1 10.548-.521A4.807 4.807 0 0 1 18.187 18zM3 14.562A2.44 2.44 0 0 0 5.438 17h12.75a3.807 3.807 0 0 0 1.394-7.351l-.429-.17-.15-.436a4.494 4.494 0 0 0-8.629.426l-.232.99-.986-.25a2.407 2.407 0 0 0-.594-.084 2.443 2.443 0 0 0-2.206 1.42l-.268.581h-.715A2.442 2.442 0 0 0 3 14.563z"
+                                        ></path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Generally fair, becoming partly cloudy to
+                                        occasionally cloudy, with few brief showers,
+                                        mainly during the morning.
+                                      </p>
+                                      <p class="text-xs leading-none">Weather</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WIND -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xml:space="preserve"
+                                        viewBox="0 0 64 64"
+                                        class="w-7 stroke-gray-200"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke-miterlimit="10"
+                                          stroke-width="4"
+                                        >
+                                          <circle cx="32" cy="32" r="31"></circle>
+                                          <circle cx="32" cy="32" r="4"></circle>
+                                          <path
+                                            d="M23.515 23.515C18.828 28.201 15 48.999 15 48.999s20.799-3.827 25.485-8.514c4.687-4.688 4.686-12.285 0-16.971-4.685-4.686-12.284-4.687-16.97.001z"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        ESE'ly - SE'ly @ 08 - 18 mph, becoming variable to
+                                        calm at times.
+                                      </p>
+                                      <p class="text-xs leading-none">Wind</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SEAS -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Seas SVG -->
+                                      <svg
+                                        class="w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 -3.18 20.402 20.402"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
+                                          ></path>
+                                          <path
+                                            d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
+                                            data-name="primary"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Slight to moderate, waves 3 - 6 feet in open
+                                        waters.
+                                      </p>
+                                      <p class="text-xs leading-none">Seas</p>
+                                    </div>
+                                  </div>
+                                </div>
+          
+                                <!-- SUNSET AND SUNRISE -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunrise SVG -->
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="w-9 fill-current text-gray-200"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            5:56 am
+                                          </p>
+                                          <p class="text-sm leading-none">Sunrise</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ml-5">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunset -->
+                                          <svg
+                                            class="w-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              stroke="#e5e7eb"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            5:59 pm
+                                          </p>
+                                          <p class="text-sm leading-none">Sunset</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+          
+                              <!-- PANEL 4: DAY 3 -->
+                              <div class="flex flex-col hidden panel panel-4">
+                                <!-- PANEL CONTENT -->
+                                <!-- VALIDITY -->
+                                <div>
+                                  <p class="text-right pr-1 text-xs pt-1 font-light">
+                                    Validity: 6:00 a.m to 6:00 a.m. (24 hrs)
+                                  </p>
+                                </div>
+          
+                                <!-- IMAGE, TIME AND TEMP -->
+                                <div class="mt-2">
+                                  <div class="flex text-xl justify-around">
+                                    <div class="flex flex-col">
+                                      <div>
+                                        <div class="flex">
+                                          <p class="pr-1 text-3xl">25&deg;C</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Day</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Night</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div class="flex flex-col">
+                                      <div></div>
+                                      <div>
+                                        <div>
+                                          <div class="flex">
+                                            <p class="pr-1 pt-2 text-3xl">25&deg;C</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WEATHER FORECAST -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Weather SVG -->
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        class="w-7 fill-current text-gray-200"
+                                      >
+                                        <path
+                                          d="M6.316 21H5.212l.935-2h1.105zm2.065 2 1.871-4H9.147l-1.87 4zm3.468-1 1.403-3h-1.105l-1.403 3zm3.298-3-2.339 5h1.105l2.339-5zm3 0-.935 2h1.104l.936-2zm-11.28-1h-1.43a3.438 3.438 0 0 1 0-6.875l.012.001A3.369 3.369 0 0 1 9.4 9.24a5.494 5.494 0 0 1 10.548-.521A4.807 4.807 0 0 1 18.187 18zM3 14.562A2.44 2.44 0 0 0 5.438 17h12.75a3.807 3.807 0 0 0 1.394-7.351l-.429-.17-.15-.436a4.494 4.494 0 0 0-8.629.426l-.232.99-.986-.25a2.407 2.407 0 0 0-.594-.084 2.443 2.443 0 0 0-2.206 1.42l-.268.581h-.715A2.442 2.442 0 0 0 3 14.563z"
+                                        ></path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Mostly fair, increasing in cloudiness as the day
+                                        progresses, with light afternoon and nighttime
+                                        showers
+                                      </p>
+                                      <p class="text-xs leading-none">Weather</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WIND -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xml:space="preserve"
+                                        viewBox="0 0 64 64"
+                                        class="w-7 stroke-gray-200"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke-miterlimit="10"
+                                          stroke-width="4"
+                                        >
+                                          <circle cx="32" cy="32" r="31"></circle>
+                                          <circle cx="32" cy="32" r="4"></circle>
+                                          <path
+                                            d="M23.515 23.515C18.828 28.201 15 48.999 15 48.999s20.799-3.827 25.485-8.514c4.687-4.688 4.686-12.285 0-16.971-4.685-4.686-12.284-4.687-16.97.001z"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        ENE'ly to E'ly @ 10 to 20 mph, becoming variable
+                                        to calm at times
+                                      </p>
+                                      <p class="text-xs leading-none">Wind</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SEAS -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Seas SVG -->
+                                      <svg
+                                        class="w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 -3.18 20.402 20.402"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
+                                          ></path>
+                                          <path
+                                            d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
+                                            data-name="primary"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Moderate with waves 4 to 6 feet in open water.
+                                      </p>
+                                      <p class="text-xs leading-none">Seas</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- TIDES -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- High Tide SVG -->
+                                          <svg
+                                            class="w-10 h-10 fill-current text-gray-100"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                          >
+                                            <g
+                                              fill="none"
+                                              stroke="#f7fafc"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path d="M10 7V1" />
+                                              <path
+                                                d="m12 3-2-2-2 2M1 18.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 14.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 10.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5"
+                                                data-name="primary"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 am
+                                          </p>
+                                          <p class="text-sm leading-none">High Tide</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Low Tide SVG -->
+                                          <svg
+                                            class="w-10 h-10 fill-current text-gray-100"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="800"
+                                            height="800"
+                                            viewBox="0 0 20 20"
+                                          >
+                                            <g
+                                              fill="none"
+                                              stroke="#f7fafc"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path d="M10 1v6" />
+                                              <path
+                                                d="m8 5 2 2 2-2M1 18.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 14.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 10.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5"
+                                                data-name="primary"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:15 am
+                                          </p>
+                                          <p class="text-sm leading-none">Low Tide</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SUNSET AND SUNRISE -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunrise SVG -->
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="w-9 fill-current text-gray-200"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 am
+                                          </p>
+                                          <p class="text-sm leading-none">Sunrise</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ml-5">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunset -->
+                                          <svg
+                                            class="w-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              stroke="#e5e7eb"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 pm
+                                          </p>
+                                          <p class="text-sm leading-none">Sunset</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+          
+                              <!-- PANEL 5: DAY 4 -->
+                              <div class="flex flex-col hidden panel panel-5">
+                                <!-- PANEL CONTENT -->
+                                <!-- VALIDITY -->
+                                <div>
+                                  <p class="text-right pr-1 text-xs pt-1 font-light">
+                                    Validity: 6:00 a.m to 6:00 a.m. (24 hrs)
+                                  </p>
+                                </div>
+          
+                                <!-- IMAGE, TIME AND TEMP -->
+                                <div class="mt-2">
+                                  <div class="flex text-xl justify-around">
+                                    <div class="flex flex-col">
+                                      <div>
+                                        <div class="flex">
+                                          <p class="pr-1 text-3xl">25&deg;C</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Day</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>Night</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/wximgs/mostlyfair.png"
+                                        alt=""
+                                        class="w-24"
+                                      />
+                                    </div>
+                                    <div class="flex flex-col">
+                                      <div></div>
+                                      <div>
+                                        <div>
+                                          <div class="flex">
+                                            <p class="pr-1 pt-2 text-3xl">25&deg;C</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WEATHER FORECAST -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Weather SVG -->
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        class="w-7 fill-current text-gray-200"
+                                      >
+                                        <path
+                                          d="M6.316 21H5.212l.935-2h1.105zm2.065 2 1.871-4H9.147l-1.87 4zm3.468-1 1.403-3h-1.105l-1.403 3zm3.298-3-2.339 5h1.105l2.339-5zm3 0-.935 2h1.104l.936-2zm-11.28-1h-1.43a3.438 3.438 0 0 1 0-6.875l.012.001A3.369 3.369 0 0 1 9.4 9.24a5.494 5.494 0 0 1 10.548-.521A4.807 4.807 0 0 1 18.187 18zM3 14.562A2.44 2.44 0 0 0 5.438 17h12.75a3.807 3.807 0 0 0 1.394-7.351l-.429-.17-.15-.436a4.494 4.494 0 0 0-8.629.426l-.232.99-.986-.25a2.407 2.407 0 0 0-.594-.084 2.443 2.443 0 0 0-2.206 1.42l-.268.581h-.715A2.442 2.442 0 0 0 3 14.563z"
+                                        ></path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Mostly fair, increasing in cloudiness as the day
+                                        progresses, with light afternoon and nighttime
+                                        showers
+                                      </p>
+                                      <p class="text-xs leading-none">Weather</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WIND -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xml:space="preserve"
+                                        viewBox="0 0 64 64"
+                                        class="w-7 stroke-gray-200"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke-miterlimit="10"
+                                          stroke-width="4"
+                                        >
+                                          <circle cx="32" cy="32" r="31"></circle>
+                                          <circle cx="32" cy="32" r="4"></circle>
+                                          <path
+                                            d="M23.515 23.515C18.828 28.201 15 48.999 15 48.999s20.799-3.827 25.485-8.514c4.687-4.688 4.686-12.285 0-16.971-4.685-4.686-12.284-4.687-16.97.001z"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        ENE'ly to E'ly @ 10 to 20 mph, becoming variable
+                                        to calm at times
+                                      </p>
+                                      <p class="text-xs leading-none">Wind</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SEAS -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Seas SVG -->
+                                      <svg
+                                        class="w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 -3.18 20.402 20.402"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
+                                          ></path>
+                                          <path
+                                            d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
+                                            data-name="primary"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Moderate with waves 4 to 6 feet in open water.
+                                      </p>
+                                      <p class="text-xs leading-none">Seas</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- TIDES -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- High Tide SVG -->
+                                          <svg
+                                            class="w-10 h-10 fill-current text-gray-100"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                          >
+                                            <g
+                                              fill="none"
+                                              stroke="#f7fafc"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path d="M10 7V1" />
+                                              <path
+                                                d="m12 3-2-2-2 2M1 18.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 14.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 10.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5"
+                                                data-name="primary"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 am
+                                          </p>
+                                          <p class="text-sm leading-none">High Tide</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Low Tide SVG -->
+                                          <svg
+                                            class="w-10 h-10 fill-current text-gray-100"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="800"
+                                            height="800"
+                                            viewBox="0 0 20 20"
+                                          >
+                                            <g
+                                              fill="none"
+                                              stroke="#f7fafc"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                            >
+                                              <path d="M10 1v6" />
+                                              <path
+                                                d="m8 5 2 2 2-2M1 18.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 14.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5M1 10.5c1.5 0 1.5.5 3 .5s1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5"
+                                                data-name="primary"
+                                              />
+                                            </g>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:15 am
+                                          </p>
+                                          <p class="text-sm leading-none">Low Tide</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SUNSET AND SUNRISE -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunrise SVG -->
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="w-9 fill-current text-gray-200"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 am
+                                          </p>
+                                          <p class="text-sm leading-none">Sunrise</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ml-5">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunset -->
+                                          <svg
+                                            class="w-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              stroke="#e5e7eb"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            6:00 pm
+                                          </p>
+                                          <p class="text-sm leading-none">Sunset</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+          
+                              <!-- PANEL 6: MARINE -->
+                              <div class="flex flex-col hidden panel panel-6">
+                                <!-- PANEL CONTENT -->
+                                <!-- VALIDITY -->
+                                <div>
+                                  <p class="text-right pr-1 text-sm pt-1 font-light">
+                                    Time issued: Thu, Sep 28, 5:00 AM LST
+                                  </p>
+                                </div>
+          
+                                <!-- IMAGE, TIME AND TEMP -->
+                                <div class="mt-2">
+                                  <div class="flex text-xl justify-around">
+                                    <div>
+                                      <div>
+                                        <p>West Coast</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/marine/1_east.png"
+                                        alt=""
+                                        class="w-52"
+                                      />
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <p>East Coast</p>
+                                      </div>
+                                      <img
+                                        src="/static/images/marine/1_west.png"
+                                        alt=""
+                                        class="w-52"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SYNOPSIS -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Weather SVG -->
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        class="w-7 fill-current text-gray-200"
+                                      >
+                                        <path
+                                          d="M6.316 21H5.212l.935-2h1.105zm2.065 2 1.871-4H9.147l-1.87 4zm3.468-1 1.403-3h-1.105l-1.403 3zm3.298-3-2.339 5h1.105l2.339-5zm3 0-.935 2h1.104l.936-2zm-11.28-1h-1.43a3.438 3.438 0 0 1 0-6.875l.012.001A3.369 3.369 0 0 1 9.4 9.24a5.494 5.494 0 0 1 10.548-.521A4.807 4.807 0 0 1 18.187 18zM3 14.562A2.44 2.44 0 0 0 5.438 17h12.75a3.807 3.807 0 0 0 1.394-7.351l-.429-.17-.15-.436a4.494 4.494 0 0 0-8.629.426l-.232.99-.986-.25a2.407 2.407 0 0 0-.594-.084 2.443 2.443 0 0 0-2.206 1.42l-.268.581h-.715A2.442 2.442 0 0 0 3 14.563z"
+                                        ></path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Light, variable winds as a result of Tropical
+                                        Storm Phillipe northeast of the Windward Islands.
+                                      </p>
+                                      <p class="text-xs leading-none">Synopsis</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WEATHER FORECAST -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Weather SVG -->
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        class="w-7 fill-current text-gray-200"
+                                      >
+                                        <path
+                                          d="M6.316 21H5.212l.935-2h1.105zm2.065 2 1.871-4H9.147l-1.87 4zm3.468-1 1.403-3h-1.105l-1.403 3zm3.298-3-2.339 5h1.105l2.339-5zm3 0-.935 2h1.104l.936-2zm-11.28-1h-1.43a3.438 3.438 0 0 1 0-6.875l.012.001A3.369 3.369 0 0 1 9.4 9.24a5.494 5.494 0 0 1 10.548-.521A4.807 4.807 0 0 1 18.187 18zM3 14.562A2.44 2.44 0 0 0 5.438 17h12.75a3.807 3.807 0 0 0 1.394-7.351l-.429-.17-.15-.436a4.494 4.494 0 0 0-8.629.426l-.232.99-.986-.25a2.407 2.407 0 0 0-.594-.084 2.443 2.443 0 0 0-2.206 1.42l-.268.581h-.715A2.442 2.442 0 0 0 3 14.563z"
+                                        ></path>
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Partly cloudy with a low chance of light showers.
+                                      </p>
+                                      <p class="text-xs leading-none">Weather</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- SEAS -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Seas SVG -->
+                                      <svg
+                                        class="w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 -3.18 20.402 20.402"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
+                                          ></path>
+                                          <path
+                                            d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
+                                            data-name="primary"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Moderate, with waves 4 to 6 feet in open water.
+                                      </p>
+                                      <p class="text-xs leading-none">Seas</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Visibility -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <!-- Seas SVG -->
+                                      <svg
+                                        class="w-7"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 -3.18 20.402 20.402"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                        >
+                                          <path
+                                            d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
+                                          ></path>
+                                          <path
+                                            d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
+                                            data-name="primary"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        Good. Greater than 5 nautical miles.
+                                      </p>
+                                      <p class="text-xs leading-none">Visibility</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- WIND -->
+                                <div>
+                                  <div class="flex mt-3">
+                                    <div>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xml:space="preserve"
+                                        viewBox="0 0 64 64"
+                                        class="w-7 stroke-gray-200"
+                                      >
+                                        <g
+                                          fill="none"
+                                          stroke-miterlimit="10"
+                                          stroke-width="4"
+                                        >
+                                          <circle cx="32" cy="32" r="31"></circle>
+                                          <circle cx="32" cy="32" r="4"></circle>
+                                          <path
+                                            d="M23.515 23.515C18.828 28.201 15 48.999 15 48.999s20.799-3.827 25.485-8.514c4.687-4.688 4.686-12.285 0-16.971-4.685-4.686-12.284-4.687-16.97.001z"
+                                          ></path>
+                                        </g>
+                                      </svg>
+                                    </div>
+                                    <div class="flex flex-col pl-2">
+                                      <p class="pr-1 font-bold text-lg leading-1">
+                                        E'ly to SE'ly @ 05 - 15 kt, becoming variable to
+                                        calm at times.
+                                      </p>
+                                      <p class="text-xs leading-none">Wind</p>
+                                    </div>
+                                  </div>
+                                </div>
+          
+                                <!-- Moon Phase -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunrise SVG -->
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="w-9 fill-current text-gray-200"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            First Quater
+                                          </p>
+                                          <p class="text-sm leading-none">
+                                            Last Moon Phase
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ml-5">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunset -->
+                                          <svg
+                                            class="w-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              stroke="#e5e7eb"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            Full Moon - 29th
+                                          </p>
+                                          <p class="text-sm leading-none">
+                                            Next Moon Phase
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- MOONRISE AND MOONSET -->
+                                <div>
+                                  <div class="flex">
+                                    <div>
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunrise SVG -->
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="w-9 fill-current text-gray-200"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            5:38 pm
+                                          </p>
+                                          <p class="text-sm leading-none">Moonrise</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="ml-5">
+                                      <div class="flex mt-3">
+                                        <div>
+                                          <!-- Sunset -->
+                                          <svg
+                                            class="w-7"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                          >
+                                            <path
+                                              stroke="#e5e7eb"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                        <div class="flex flex-col pl-2">
+                                          <p class="pr-1 font-bold text-lg leading-1">
+                                            5:03 am
+                                          </p>
+                                          <p class="text-sm leading-none">Moonset</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+          
+                                <div>
+                                  <p class="text-right pr-1 text-sm pt-1 font-light">
+                                    Validity: 5:00 AM - 5:00 AM (24 hrs)
+                                  </p>
+                                </div>
+                              </div>
+          
+                              <!-- EXPLAINER -->
+                              <div>
+                                <p class="text-right pr-1 text-sm pt-1 font-light">
+                                  See definitions of terms
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        
+                      </div>
+
+            <!-- Products and Services -->
+            <div
+              class="border border-red-500 flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 lg:col-span-3 lg:order-1"
+            >
+              <div class="flex flex-col space-y-8 md:space-y-12">
+
+                <div class="flex px-1 py-4">
+                  <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="https://source.unsplash.com/random/244x324">
+                  <div class="flex flex-col flex-grow">
+                    <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Aenean ac tristique lorem, ut mollis dui.</a>
+                    <p class="mt-auto text-xs text-gray-600">5 minutes ago
+                      <a rel="noopener noreferrer" href="#" class="block text-blue-400 lg:ml-2 lg:inline hover:underline">Politics</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex px-1 py-4">
+                  <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="https://source.unsplash.com/random/245x325">
+                  <div class="flex flex-col flex-grow">
+                    <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Nulla consectetur efficitur.</a>
+                    <p class="mt-auto text-xs text-gray-600">14 minutes ago
+                      <a rel="noopener noreferrer" href="#" class="block text-blue-400 lg:ml-2 lg:inline hover:underline">Sports</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex px-1 py-4">
+                  <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="https://source.unsplash.com/random/246x326">
+                  <div class="flex flex-col flex-grow">
+                    <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Vitae semper augue purus tincidunt libero.</a>
+                    <p class="mt-auto text-xs text-gray-600">22 minutes ago
+                      <a rel="noopener noreferrer" href="#" class="block text-blue-400 lg:ml-2 lg:inline hover:underline">World</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex px-1 py-4">
+                  <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500" src="https://source.unsplash.com/random/247x327">
+                  <div class="flex flex-col flex-grow">
+                    <a rel="noopener noreferrer" href="#" class="font-serif hover:underline">Suspendisse potenti.</a>
+                    <p class="mt-auto text-xs text-gray-600">37 minutes ago
+                      <a rel="noopener noreferrer" href="#" class="block text-blue-400 lg:ml-2 lg:inline hover:underline">Business</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col w-full space-y-2">
+                <div class="flex w-full h-1 bg-opacity-10 bg-blue-600">
+                  <div class="w-1/2 h-full bg-blue-600"></div>
+                </div>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="flex items-center justify-between w-full"
+                >
+                  <span class="text-xs font-bold tracki uppercase"
+                    >See more exclusives</span
+                  >
+                  <svg
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 stroke-current text-blue-600"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- News -->
+            <div
+              class="border border-red-500 flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 lg:col-span-3 lg:order-3"
+            >
+              <div class="flex flex-col space-y-8 md:space-y-12">
+                <div class="flex flex-col space-y-2">
+                  <h3 class="flex items-center space-x-2">
+                    <span
+                      class="flex-shrink-0 w-2 h-2 uppercase rounded-full bg-blue-600"
+                    ></span>
+                    <span class="text-xs font-bold tracki uppercase"
+                      >Exclusive</span
+                    >
+                  </h3>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="font-serif hover:underline"
+                    >Donec sed elit quis odio mollis dignissim eget et nulla.</a
+                  >
+                  <p class="text-xs text-gray-600">
+                    47 minutes ago by
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="hover:underline text-blue-600"
+                      >Leroy Jenkins</a
+                    >
+                  </p>
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <h3 class="flex items-center space-x-2 text-gray-600">
+                    <span
+                      class="flex-shrink-0 w-2 h-2 uppercase rounded-full bg-blue-600"
+                    ></span>
+                    <span class="text-xs font-bold tracki uppercase"
+                      >Exclusive</span
+                    >
+                  </h3>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="font-serif hover:underline"
+                    >Ut fermentum nunc quis ipsum laoreet condimentum.</a
+                  >
+                  <p class="text-xs">
+                    2 hours ago by
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="hover:underline text-blue-600"
+                      >Leroy Jenkins</a
+                    >
+                  </p>
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <h3 class="flex items-center space-x-2 text-gray-600">
+                    <span
+                      class="flex-shrink-0 w-2 h-2 uppercase rounded-full bg-blue-600"
+                    ></span>
+                    <span class="text-xs font-bold tracki uppercase"
+                      >Exclusive</span
+                    >
+                  </h3>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="font-serif hover:underline"
+                    >Nunc nec ipsum lobortis, pulvinar neque sed.</a
+                  >
+                  <p class="text-xs text-gray-600">
+                    4 hours ago by
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="hover:underline text-blue-600"
+                      >Leroy Jenkins</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col w-full space-y-2">
+                <div class="flex w-full h-1 bg-opacity-10 bg-blue-600">
+                  <div class="w-1/2 h-full bg-blue-600"></div>
+                </div>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="flex items-center justify-between w-full"
+                >
+                  <span class="text-xs font-bold tracki uppercase"
+                    >See more exclusives</span
+                  >
+                  <svg
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 stroke-current text-blue-600"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </section>
+
+        <!-- REPORTS -->
+        <div class="lg:row-span-3 lg:order-4">
+          <!-- REPORTS CONTAINER -->
+
+          <div
+            id=""
+            class="py-7 px-5"
+            style="
+              background-image: url(/static/images/bgimage/heatindex.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <section>
+              <div
+                class="flex flex-col m-2 p-5 items-center justify-center text-gray-200 bg-sky-900 border-2 border-gray-300 bg-opacity-90 md:max-w-xl md:mx-auto"
+              >
+                <div class="uppercase">
+                  <p class="text-center text-xl">
+                    As Grenada advances into the late Dry Season, the chance for
+                    extremely wet or dry days is low. Rainfall events are
+                    expected to be mostly light and short-lived
+                  </p>
+                </div>
+                <div class="mt-3">
+                  <p class="text-center">
+                    At this time of year, windy conditions can raise and spread
+                    local dust. This is particularly true during dry spells and
+                    Saharan dust episodes.
+                  </p>
+                </div>
+                <div class="flex justify-center mt-3">
+                  <a
+                    href="#"
+                    class="inline-flex items-center px-5 py-2 text-sm font-medium text-center text-white bg-sky-700 rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 uppercase"
+                  >
+                    Read the full report
+                    <svg
+                      aria-hidden="true"
+                      class="w-4 h-4 ml-2 -mr-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-sky-900 text-center lg:mt-2">
+      <div
+        class="flex flex-col max-w-7xl items-center justify-center mx-auto p-5 text-gray-300 text-base"
+      >
+        <div>
+          <a href="/" class="flex items-center justify-center">
+            <img src="/static/images/logos/gmslogo.png" alt="" class="w-28" />
+            <p
+              class="pl-2 font-bold tracking-wide text-lg hover:text-orange-400"
+            >
+              Grenada Met Service
+            </p>
+          </a>
+        </div>
+        <!-- SOCIAL MEDIA SVGS -->
+        <div class="flex m-2 items-center justify-center space-x-5 mt-5">
+          <!-- FACEBOOK -->
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="h-9 w-9"
+              style="color: #1877f2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <!-- WHATSAPP -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-9 w-9"
+              fill="currentColor"
+              style="color: #128c7e"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <!-- INSTAGRAM -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-9 w-9"
+              fill="currentColor"
+              style="color: #c13584"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <!-- TWITTER -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-9 w-9"
+              fill="currentColor"
+              style="color: #1da1f2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-5">
+          <div>
+            <a
+              href="http://nadma.gd/"
+              class="hover:text-orange-400"
+              target="_blank"
+              >NaDMA</a
+            >
+            <span class="text-orange-600">/</span>
+            <a href="/outlook/" class="hover:text-orange-400 uppercase"
+              >Tropical Weather Outlook</a
+            >
+          </div>
+          <div>
+            <a href="/alerts/" class="hover:text-orange-400 uppercase"
+              >Alerts</a
+            >
+            <span class="text-orange-600">/</span>
+            <a href="/posts/" class="hover:text-orange-400 uppercase">Posts</a>
+            <span class="text-orange-600">/</span>
+            <a href="/usefullinks/" class="hover:text-orange-400 uppercase"
+              >Useful Links</a
+            >
+          </div>
+        </div>
+
+        <div class="uppercase mt-5">
+          <a href="/aboutus/" class="hover:text-orange-400">About Us</a>
+          <span class="text-orange-600">/</span>
+          <a href="/contactus/" class="hover:text-orange-400">Contact Us</a>
+        </div>
+
+        <div class="mt-5">
+          <p>
+            This information is provided for your own personal non-commercial
+            use in accordance with the Grenada Meteorological Service website
+            <a href="/conditions/" class="underline hover:text-orange-400"
+              >terms and conditions</a
+            >.
+          </p>
+        </div>
+
+        <div class="flex flex-col mt-5 items-center">
+          <a href="https://gaa.gd/" target="_blank"
+            ><img
+              src="/static/images/logos/gaalogo.png"
+              alt="The Grenada Airports' Authority Official Logo"
+              class="w-32"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="/static/scripts/main.js" defer></script>
+  </body>
+</html>
