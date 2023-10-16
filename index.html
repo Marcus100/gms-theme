@@ -137,11 +137,10 @@
 
     <!-- MAIN CONTAINER -->
     <div class="items-center justify-center mx-auto mt-2">
-
       <!-- ALERTS AND ADVISORIES SECTION -->
       <section class="mx-2">
         <div
-          class="bg-green-100 px-8 py-2 font-semibold border border-green-400 text-green-700 rounded mx-auto  text-base lg:text-xl md:max-w-xl lg:max-w-4xl"
+          class="bg-green-100 px-8 py-2 font-semibold border border-green-400 text-green-700 rounded mx-auto text-base lg:text-xl md:max-w-xl lg:max-w-4xl"
           role="alert"
         >
           <div class="mx-auto grid grid-cols-2">
@@ -158,15 +157,17 @@
         </div>
       </section>
 
-      <div class="mt-2 bg-center bg-no-repeat bg-cover"
-      style="background-image: url('gms-theme/static/images/bgimage/wxhome.jpg');"
+      <div
+        class="mt-2 bg-center bg-no-repeat bg-cover"
+        style="
+          background-image: url('gms-theme/static/images/bgimage/wxhome.jpg');
+        "
       >
         <section class="mx-auto lg:max-w-6xl">
-          <div class="pt-2 container grid grid-cols-12 px-2 lg:px-0 ">
-
+          <div class="pt-2 container grid grid-cols-12 px-2 lg:px-0">
             <!-- WEATHER -->
             <div
-              class="flex col-span-12 lg:my-2 lg:max-w-2xl lg:col-span-8 lg:order-1"
+              class="flex col-span-12 lg:my-2 md:max-w-2xl md:col-span-8 md:order-1"
               id="tabs"
             >
               <!-- TABS/PANELS CONTAINER -->
@@ -1723,7 +1724,7 @@
 
             <!-- PRODUCTS & SERVICES -->
             <div
-              class="flex flex-col justify-between col-span-12 lg:col-span-4 lg:order-2"
+              class="flex flex-col justify-between col-span-12 md:col-span-4 md:order-2"
             >
               <div class="flex flex-col">
                 <div class="flex px-1 py-4 lg:flex-row-reverse">
@@ -1739,7 +1740,7 @@
                       class="font-serif hover:underline"
                       >Aenean ac tristique lorem, ut mollis dui.</a
                     >
-                    <p class="mt-auto text-xs ">
+                    <p class="mt-auto text-xs">
                       5 minutes ago
                       <a
                         rel="noopener noreferrer"
@@ -1850,9 +1851,90 @@
               </div>
             </div>
 
+            <!-- PRODUCTS & SERVICES -->
+            <div
+              class="hidden md:flex md:flex-col justify-between md:col-span-8 md:order-3"
+            >
+              <div class="flex flex-col">
+                <div class="flex px-1 py-4">
+                  <img
+                    alt=""
+                    class="flex-shrink-0 object-cover w-36 h-36 mr-4"
+                    src="https://source.unsplash.com/random/246x326"
+                  />
+                  <div class="flex flex-col flex-grow">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="font-serif hover:underline"
+                      >Vitae semper augue purus tincidunt libero.</a
+                    >
+                    <p class="mt-auto text-xs">
+                      22 minutes ago
+                      <a
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="block text-red-400 lg:ml-2 lg:inline hover:underline"
+                        >World</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex px-1 py-4">
+                  <img
+                    alt=""
+                    class="flex-shrink-0 object-cover w-36 h-36 mr-4 bg-gray-500"
+                    src="https://source.unsplash.com/random/247x327"
+                  />
+                  <div class="flex flex-col flex-grow">
+                    <a
+                      rel="noopener noreferrer"
+                      href="#"
+                      class="font-serif hover:underline"
+                      >Suspendisse potenti.</a
+                    >
+                    <p class="mt-auto text-xs">
+                      37 minutes ago
+                      <a
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="block text-blue-400 lg:ml-2 lg:inline hover:underline"
+                        >Business</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col w-full space-y-2">
+                <div class="flex w-full h-1 bg-opacity-10 bg-blue-600">
+                  <div class="w-1/2 h-full bg-blue-600"></div>
+                </div>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="flex items-center justify-between w-full"
+                >
+                  <span class="text-xs font-bold tracki uppercase"
+                    >See more exclusives</span
+                  >
+                  <svg
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 stroke-current text-blue-600"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
             <!-- POSTS -->
             <div
-              class="flex flex-col justify-between col-span-12 lg:px-2 lg:col-span-12 lg:order-3"
+              class="flex flex-col justify-between col-span-12 md:px-2 md:col-span-4 md:order-4"
             >
               <div class="flex flex-col space-y-8 md:space-y-12">
                 <div class="flex flex-col space-y-2">
@@ -1961,12 +2043,15 @@
         </section>
 
         <!-- REPORTS -->
-        <div class="bg-center bg-no-repeat bg-cover"
-        style="background-image: url('gms-theme/static/images/bgimage/heatindex.jpg');">
+        <div
+          class="bg-center bg-no-repeat bg-cover"
+          style="
+            background-image: url('gms-theme/static/images/bgimage/heatindex.jpg');
+          "
+        >
           <!-- REPORTS CONTAINER -->
 
-          <div
-          >
+          <div>
             <section class="p-10">
               <div
                 class="flex flex-col p-5 items-center justify-center text-gray-200 bg-sky-900 border-2 border-gray-300 bg-opacity-90 md:max-w-xl md:mx-auto"
@@ -2014,13 +2099,17 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class=" bg-sky-900 text-center ">
+    <footer class="bg-sky-900 text-center">
       <div
         class="flex flex-col items-center justify-center mx-auto p-5 text-gray-300 text-base"
       >
         <div>
           <a href="/" class="flex items-center justify-center">
-            <img src="gms-theme/static/images/logos/gmslogo.png" alt="" class="w-28" />
+            <img
+              src="gms-theme/static/images/logos/gmslogo.png"
+              alt=""
+              class="w-28"
+            />
             <p
               class="pl-2 font-bold tracking-wide text-lg hover:text-orange-400"
             >
