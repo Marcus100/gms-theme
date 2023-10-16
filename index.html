@@ -24,7 +24,7 @@
   >
     <!-- HEADER & NAVIGATION -->
     <header class="sticky top-0 md:static">
-      <nav class="bg-sky-800 text-gray-100 pl-3 pr-3">
+      <nav class="bg-sky-900 text-gray-100 pl-3 pr-3">
         <div class="container">
           <div class="flex justify-between max-w-5xl mx-auto">
             <div class="z-40 flex py-1">
@@ -136,18 +136,18 @@
     </header>
 
     <!-- MAIN CONTAINER -->
-    <div class="items-center justify-center mx-auto">
+    <div class="items-center justify-center mx-auto mt-2">
 
       <!-- ALERTS AND ADVISORIES SECTION -->
-      <section class="mx-3">
+      <section class="mx-2">
         <div
-          class="bg-green-100 border border-green-400 text-green-700 rounded mx-auto mt-2 p-1 text-base lg:text-xl md:max-w-xl lg:max-w-4xl"
+          class="bg-green-100 px-8 py-2 font-semibold border border-green-400 text-green-700 rounded mx-auto  text-base lg:text-xl md:max-w-xl lg:max-w-4xl"
           role="alert"
         >
           <div class="mx-auto grid grid-cols-2">
             <div>
-              <strong class="font-bold text-green-600">1 Warning!</strong>
-              <strong class="font-bold text-green-600">2 Advisories!</strong>
+              <strong class="font-bold text-green-600">1 Warning,</strong>
+              <strong class="font-bold text-green-600">2 Advisories</strong>
             </div>
             <div class="justify-self-end">
               <a href="/alerts/">
@@ -162,7 +162,8 @@
       style="background-image: url('gms-theme/static/images/bgimage/wxhome.jpg');"
       >
         <section class="mx-auto lg:max-w-6xl">
-          <div class="container grid grid-cols-12 px-2 lg:px-0 ">
+          <div class="pt-2 container grid grid-cols-12 px-2 lg:px-0 ">
+
             <!-- WEATHER -->
             <div
               class="flex col-span-12 lg:my-2 lg:max-w-2xl lg:col-span-8 lg:order-1"
@@ -226,11 +227,10 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- TAB PANELS -->
                 <div
                   id="panels"
-                  class="container text-base my-2 pb-2 px-2 border rounded bg-sky-900 border-gray-300 bg-opacity-60 mx-auto"
+                  class="container text-base my-2 pb-2 px-2 border rounded bg-sky-900 border-gray-300 bg-opacity-70 mx-auto"
                 >
                   <!-- PANEL 1: HOURLY -->
                   <div class="flex flex-col panel panel-1">
@@ -250,7 +250,7 @@
                           </div>
                           <div class="w-1/3">
                             <img
-                              src="/static/images/meteocons/clear-day.svg"
+                              src="gms-theme/static/images/meteocons/clear-day.svg"
                               alt=""
                               class="w-48"
                             />
@@ -266,7 +266,7 @@
                             <div>
                               <!-- Dew Point SVG -->
                               <img
-                                src="/static/images/meteocons/haze.svg"
+                                src="gms-theme/static/images/meteocons/haze.svg"
                                 alt=""
                                 class="w-12"
                               />
@@ -282,7 +282,7 @@
                             <div>
                               <!-- Dew Point SVG -->
                               <img
-                                src="/static/images/meteocons/thermometer-raindrop.svg"
+                                src="gms-theme/static/images/meteocons/thermometer-raindrop.svg"
                                 alt=""
                                 class="w-12"
                               />
@@ -299,7 +299,7 @@
                             <div>
                               <!-- Humidity SVG -->
                               <img
-                                src="/static/images/meteocons/humidity.svg"
+                                src="gms-theme/static/images/meteocons/humidity.svg"
                                 alt=""
                                 class="w-14"
                               />
@@ -316,7 +316,7 @@
                             <div>
                               <!-- UV Index SVG -->
                               <img
-                                src="/static/images/meteocons/uv-index.svg"
+                                src="gms-theme/static/images/meteocons/uv-index.svg"
                                 alt=""
                                 class="w-12"
                               />
@@ -335,7 +335,7 @@
                             <div>
                               <!-- Wind SVG -->
                               <img
-                                src="/static/images/meteocons/wind.svg"
+                                src="gms-theme/static/images/meteocons/wind.svg"
                                 alt=""
                                 class="w-12"
                               />
@@ -352,7 +352,7 @@
                             <div>
                               <!-- Visibility SVG -->
                               <img
-                                src="/static/images/meteocons/visibility.svg"
+                                src="gms-theme/static/images/meteocons/visibility.svg"
                                 alt=""
                                 class="w-14"
                               />
@@ -369,7 +369,7 @@
                             <div>
                               <!-- Barometer SVG -->
                               <img
-                                src="/static/images/meteocons/barometer.svg"
+                                src="gms-theme/static/images/meteocons/barometer.svg"
                                 alt=""
                                 class="w-12"
                               />
@@ -1722,13 +1722,13 @@
 
             <!-- PRODUCTS & SERVICES -->
             <div
-              class="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 lg:col-span-4 lg:order-2"
+              class="flex flex-col justify-between col-span-12 lg:col-span-4 lg:order-2"
             >
               <div class="flex flex-col">
                 <div class="flex px-1 py-4 lg:flex-row-reverse">
                   <img
                     alt=""
-                    class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500"
+                    class="flex-shrink-0 object-cover w-20 h-20 mr-4"
                     src="https://source.unsplash.com/random/244x324"
                   />
                   <div class="flex flex-col flex-grow">
@@ -1738,7 +1738,7 @@
                       class="font-serif hover:underline"
                       >Aenean ac tristique lorem, ut mollis dui.</a
                     >
-                    <p class="mt-auto text-xs text-gray-600">
+                    <p class="mt-auto text-xs ">
                       5 minutes ago
                       <a
                         rel="noopener noreferrer"
@@ -1752,7 +1752,7 @@
                 <div class="flex px-1 py-4 lg:flex-row-reverse">
                   <img
                     alt=""
-                    class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500"
+                    class="flex-shrink-0 object-cover w-20 h-20 mr-4"
                     src="https://source.unsplash.com/random/245x325"
                   />
                   <div class="flex flex-col flex-grow">
@@ -1762,7 +1762,7 @@
                       class="font-serif hover:underline"
                       >Nulla consectetur efficitur.</a
                     >
-                    <p class="mt-auto text-xs text-gray-600">
+                    <p class="mt-auto text-xs">
                       14 minutes ago
                       <a
                         rel="noopener noreferrer"
@@ -1776,7 +1776,7 @@
                 <div class="flex px-1 py-4 lg:flex-row-reverse">
                   <img
                     alt=""
-                    class="flex-shrink-0 object-cover w-20 h-20 mr-4 bg-gray-500"
+                    class="flex-shrink-0 object-cover w-20 h-20 mr-4"
                     src="https://source.unsplash.com/random/246x326"
                   />
                   <div class="flex flex-col flex-grow">
@@ -1786,7 +1786,7 @@
                       class="font-serif hover:underline"
                       >Vitae semper augue purus tincidunt libero.</a
                     >
-                    <p class="mt-auto text-xs text-gray-600">
+                    <p class="mt-auto text-xs">
                       22 minutes ago
                       <a
                         rel="noopener noreferrer"
@@ -1810,7 +1810,7 @@
                       class="font-serif hover:underline"
                       >Suspendisse potenti.</a
                     >
-                    <p class="mt-auto text-xs text-gray-600">
+                    <p class="mt-auto text-xs">
                       37 minutes ago
                       <a
                         rel="noopener noreferrer"
@@ -1960,13 +1960,13 @@
         </section>
 
         <!-- REPORTS -->
-        <div class="  bg-center bg-no-repeat bg-cover"
-        style="background-image: url('/static/images/bgimage/heatindex.jpg');">
+        <div class="bg-center bg-no-repeat bg-cover"
+        style="background-image: url('gms-theme/static/images/bgimage/heatindex.jpg');">
           <!-- REPORTS CONTAINER -->
 
           <div
           >
-            <section>
+            <section class="p-10">
               <div
                 class="flex flex-col p-5 items-center justify-center text-gray-200 bg-sky-900 border-2 border-gray-300 bg-opacity-90 md:max-w-xl md:mx-auto"
               >
@@ -2019,7 +2019,7 @@
       >
         <div>
           <a href="/" class="flex items-center justify-center">
-            <img src="/gms-theme/images/logos/gmslogo.png" alt="" class="w-28" />
+            <img src="gms-theme/static/images/logos/gmslogo.png" alt="" class="w-28" />
             <p
               class="pl-2 font-bold tracking-wide text-lg hover:text-orange-400"
             >
