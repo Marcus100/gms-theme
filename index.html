@@ -23,11 +23,11 @@
     class="antialiased bg-gradient-to-r from-[#6E95C0] via-[#89A7C9] to-[#9FB5CD] text-gray-100"
   >
     <!-- HEADER & NAVIGATION -->
-    <header class="sticky top-0 md:static">
+    <header class="sticky top-0 z-50 md:static">
       <nav class="bg-sky-900 text-gray-100 pl-3 pr-3">
         <div class="container">
           <div class="flex justify-between max-w-5xl mx-auto">
-            <div class="z-40 flex py-1">
+            <div class="z-50 flex py-1">
               <div>
                 <a href="/" class="flex items-center lg:p-1">
                   <img
@@ -36,7 +36,7 @@
                     class="w-14 lg:w-20"
                   />
                   <p
-                    class="pl-2 font-bold tracking-wide  hover:text-orange-400 text-xl md:text-2xl lg:text-3xl"
+                    class="pl-2 font-bold tracking-wide hover:text-orange-400 text-xl md:text-2xl lg:text-3xl"
                   >
                     Grenada Met Service
                   </p>
@@ -136,12 +136,16 @@
     </header>
 
     <!-- MAIN CONTAINER -->
-    <div class="items-center justify-center mx-auto bg-center bg-no-repeat bg-cover"
-    style="background-image: url('gms-theme/static/images/bgimage/wxhome.jpg');">
+    <div
+      class="items-center justify-center mx-auto bg-center bg-no-repeat bg-cover"
+      style="
+        background-image: url('gms-theme/static/images/bgimage/wxhome.jpg');
+      "
+    >
       <!-- ALERTS AND ADVISORIES SECTION -->
       <section class="mx-2 pt-2">
         <div
-          class=" bg-green-100 px-3 py-2 font-semibold border border-green-400 text-green-700 rounded-md mx-auto text-base lg:text-xl md:max-w-3xl lg:max-w-5xl"
+          class="bg-green-100 px-3 py-2 font-semibold border border-green-400 text-green-700 rounded-md mx-auto text-base lg:text-xl md:max-w-3xl lg:max-w-5xl"
           role="alert"
         >
           <div class="mx-auto grid grid-cols-3">
@@ -151,7 +155,9 @@
             </div>
             <div class="col-span-1 justify-self-end">
               <a href="/alerts/">
-                <strong class="font-bold text-green-600"><span>View all</span> <span class="text-xl">></span> </strong>
+                <strong class="font-bold text-green-600"
+                  ><span>View all</span> <span class="text-xl">></span>
+                </strong>
               </a>
             </div>
           </div>
@@ -161,6 +167,7 @@
       <div>
         <section class="mx-auto lg:max-w-6xl">
           <div class="pt-2 container grid grid-cols-12 px-2 md:mx-auto">
+
             <!-- WEATHER -->
             <div
               class="flex col-span-12 lg:my-2 md:max-w-xl md:col-span-7 md:order-1"
@@ -315,8 +322,6 @@
                             </div>
                           </div>
 
-
-
                           <div class="flex mt-3">
                             <div>
                               <!-- UV Index SVG -->
@@ -461,7 +466,8 @@
                         </div>
                         <div class="flex flex-col pl-2">
                           <p class="pr-1 font-bold text-lg leading-1">
-                            Generally fair, becoming partly cloudy at times with light isolated showers.
+                            Generally fair, becoming partly cloudy at times with
+                            light isolated showers.
                           </p>
                           <p class="text-xs leading-none">Weather</p>
                         </div>
@@ -1399,7 +1405,7 @@
                             <p>West Coast</p>
                           </div>
                           <img
-                            src="/static/images/marine/1_east.png"
+                            src="/gms-theme/static/images/marine/yellow/west_5.png"
                             alt=""
                             class="w-52"
                           />
@@ -1409,7 +1415,7 @@
                             <p>East Coast</p>
                           </div>
                           <img
-                            src="/static/images/marine/1_west.png"
+                            src="/gms-theme/static/images/marine/yellow/east_5.png"
                             alt=""
                             class="w-52"
                           />
@@ -1434,8 +1440,7 @@
                         </div>
                         <div class="flex flex-col pl-2">
                           <p class="pr-1 font-bold text-lg leading-1">
-                            Light, variable winds as a result of Tropical Storm
-                            Phillipe northeast of the Windward Islands.
+                            A surge of moisture and surface trough is impacting the vicinity.
                           </p>
                           <p class="text-xs leading-none">Synopsis</p>
                         </div>
@@ -1459,7 +1464,7 @@
                         </div>
                         <div class="flex flex-col pl-2">
                           <p class="pr-1 font-bold text-lg leading-1">
-                            Partly cloudy with a low chance of light showers.
+                            Partly cloudy becoming cloudy at times with showers and possible isolated thunderstorm.
                           </p>
                           <p class="text-xs leading-none">Weather</p>
                         </div>
@@ -1494,7 +1499,7 @@
                         </div>
                         <div class="flex flex-col pl-2">
                           <p class="pr-1 font-bold text-lg leading-1">
-                            Moderate, with waves 4 to 6 feet in open water.
+                            Moderate to rouvh with waves 4 to 6 ft in open waters.
                           </p>
                           <p class="text-xs leading-none">Seas</p>
                         </div>
@@ -1504,28 +1509,14 @@
                     <div>
                       <div class="flex mt-3">
                         <div>
-                          <!-- Seas SVG -->
-                          <svg
-                            class="w-7"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -3.18 20.402 20.402"
-                          >
-                            <g
-                              fill="none"
-                              stroke="#e5e7eb"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            >
-                              <path
-                                d="M1.169 12.54c1.5 0 1.5.5 3 .5s1.51-.5 3-.5 1.5.5 3 .5 1.5-.5 3-.5 1.5.5 3 .5 1.49-.5 3-.5"
-                              ></path>
-                              <path
-                                d="M1.169 9.04a4.93 4.93 0 0 0 2.41-1.21c2.8-2 4.59.57 6.59-.18s1.38-4.31-1.94-5.11c4.76-3.58 8.31 0 8.68 2.68.26 1.82.44 3.31 2.26 3.82"
-                                data-name="primary"
-                              ></path>
-                            </g>
-                          </svg>
+                          <div>
+                            <!-- Visibility SVG -->
+                            <img
+                              src="gms-theme/static/images/meteocons/visibility.svg"
+                              alt=""
+                              class="w-12"
+                            />
+                          </div>
                         </div>
                         <div class="flex flex-col pl-2">
                           <p class="pr-1 font-bold text-lg leading-1">
@@ -1539,29 +1530,16 @@
                     <div>
                       <div class="flex mt-3">
                         <div>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xml:space="preserve"
-                            viewBox="0 0 64 64"
-                            class="w-7 stroke-gray-200"
-                          >
-                            <g
-                              fill="none"
-                              stroke-miterlimit="10"
-                              stroke-width="4"
-                            >
-                              <circle cx="32" cy="32" r="31"></circle>
-                              <circle cx="32" cy="32" r="4"></circle>
-                              <path
-                                d="M23.515 23.515C18.828 28.201 15 48.999 15 48.999s20.799-3.827 25.485-8.514c4.687-4.688 4.686-12.285 0-16.971-4.685-4.686-12.284-4.687-16.97.001z"
-                              ></path>
-                            </g>
-                          </svg>
+                          <!-- Wind SVG -->
+                          <img
+                            src="gms-theme/static/images/meteocons/wind.svg"
+                            alt=""
+                            class="w-12"
+                          />
                         </div>
                         <div class="flex flex-col pl-2">
                           <p class="pr-1 font-bold text-lg leading-1">
-                            E'ly to SE'ly @ 05 - 15 kt, becoming variable to
-                            calm at times.
+                            E'ly - SE'ly @ 10 - 20 kts
                           </p>
                           <p class="text-xs leading-none">Wind</p>
                         </div>
@@ -1574,20 +1552,16 @@
                         <div>
                           <div class="flex mt-3">
                             <div>
-                              <!-- Sunrise SVG -->
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="w-9 fill-current text-gray-200"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
-                                ></path>
-                              </svg>
+                              <!-- Last Moon Phase SVG -->
+                              <img
+                                src="gms-theme/static/images/meteocons/moon-full.svg"
+                                alt=""
+                                class="w-12"
+                              />
                             </div>
                             <div class="flex flex-col pl-2">
                               <p class="pr-1 font-bold text-lg leading-1">
-                                First Quater
+                                Full Moon
                               </p>
                               <p class="text-sm leading-none">
                                 Last Moon Phase
@@ -1598,25 +1572,16 @@
                         <div class="ml-5">
                           <div class="flex mt-3">
                             <div>
-                              <!-- Sunset -->
-                              <svg
-                                class="w-7"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  stroke="#e5e7eb"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
-                                ></path>
-                              </svg>
+                              <!-- Next Moon Phase SVG -->
+                              <img
+                                src="gms-theme/static/images/meteocons/moon-new.svg"
+                                alt=""
+                                class="w-12"
+                              />
                             </div>
                             <div class="flex flex-col pl-2">
                               <p class="pr-1 font-bold text-lg leading-1">
-                                Full Moon - 29th
+                                New Moon - 5th
                               </p>
                               <p class="text-sm leading-none">
                                 Next Moon Phase
@@ -1632,20 +1597,16 @@
                         <div>
                           <div class="flex mt-3">
                             <div>
-                              <!-- Sunrise SVG -->
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="w-9 fill-current text-gray-200"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  d="M7 15a5 5 0 0 1 10 0 1 1 0 0 1-2 0 3 3 0 0 0-6 0 1 1 0 0 1-2 0Zm11-4.586.707-.707a1 1 0 0 0-1.414-1.414L16.586 9A1 1 0 1 0 18 10.414ZM20 16h1a1 1 0 0 0 0-2h-1a1 1 0 0 0 0 2ZM4 14H3a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm1.293-4.293.707.707A1 1 0 1 0 7.414 9l-.707-.707a1 1 0 0 0-1.414 1.414ZM4 18a1 1 0 0 0 1 1h14a1 1 0 0 0 0-2H5a1 1 0 0 0-1 1Zm4 3a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2Zm4-12a1 1 0 0 0 1-1V4.414l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.416 0l-3 3a1 1 0 0 0 1.416 1.414L11 4.414V8a1 1 0 0 0 1 1Z"
-                                ></path>
-                              </svg>
+                              <!-- Moonrise SVG -->
+                              <img
+                                src="gms-theme/static/images/meteocons/moonrise.svg"
+                                alt=""
+                                class="w-12"
+                              />
                             </div>
                             <div class="flex flex-col pl-2">
                               <p class="pr-1 font-bold text-lg leading-1">
-                                5:38 pm
+                                7:17 pm
                               </p>
                               <p class="text-sm leading-none">Moonrise</p>
                             </div>
@@ -1654,25 +1615,16 @@
                         <div class="ml-5">
                           <div class="flex mt-3">
                             <div>
-                              <!-- Sunset -->
-                              <svg
-                                class="w-7"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  stroke="#e5e7eb"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="2"
-                                  d="M4 18H2m4.314-5.686L4.9 10.9m12.786 1.414L19.1 10.9M22 18h-2M7 18a5 5 0 0 1 10 0m5 4H2M16 5l-4 4m0 0L8 5m4 4V2"
-                                ></path>
-                              </svg>
+                              <!-- Moonset SVG -->
+                              <img
+                                src="gms-theme/static/images/meteocons/moonset.svg"
+                                alt=""
+                                class="w-12"
+                              />
                             </div>
                             <div class="flex flex-col pl-2">
                               <p class="pr-1 font-bold text-lg leading-1">
-                                5:03 am
+                                7:32 am
                               </p>
                               <p class="text-sm leading-none">Moonset</p>
                             </div>
@@ -1703,15 +1655,16 @@
               class="flex flex-col justify-between col-span-12 md:pl-3 lg:pl-0 md:col-span-5 md:order-2"
             >
               <div class="flex flex-col">
-                <span class="font-bold text-xl text-orange-400 md:pt-4">Top Stories</span>
+                <span class="font-bold text-xl text-orange-400 md:pt-4"
+                  >Top Stories</span
+                >
                 <div class="flex px-1 py-2 md:flex-row-reverse">
-                  
                   <img
                     alt=""
                     class="flex-shrink-0 object-cover w-20 h-20 mr-2"
                     src="https://source.unsplash.com/random/244x324"
                   />
-                  <div class="flex flex-col flex-grow">
+                  <div class="flex flex-col flex-grow relative lg:before:absolute lg:before:top-2 lg:before:w-3 lg:before:h-3 lg:before:rounded-full lg:before:left-[-33px] lg:before:z-[1] lg:before:bg-orange-600">
                     <a
                       rel="noopener noreferrer"
                       href="#"
@@ -1720,13 +1673,13 @@
                     >
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Blog</a
-                    >
-                    8:00 PM
-                  </p>                        
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Blog</a
+                      >
+                      8:00 PM
+                    </p>
                   </div>
                 </div>
                 <div class="flex px-1 py-2 border-t md:flex-row-reverse">
@@ -1735,22 +1688,23 @@
                     class="flex-shrink-0 object-cover w-20 h-20 mr-2"
                     src="https://source.unsplash.com/random/245x325"
                   />
-                  <div class="flex flex-col flex-grow">
+                  <div class="flex flex-col flex-grow relative lg:before:absolute lg:before:top-2 lg:before:w-3 lg:before:h-3 lg:before:rounded-full lg:before:left-[-33px] lg:before:z-[1] lg:before:bg-orange-600">
                     <a
                       rel="noopener noreferrer"
                       href="#"
                       class="leading-tight text-lg font-semibold hover:underline"
-                      >Grenada's hottest October on record following a record-breaking August</a
+                      >Grenada's hottest October on record following a
+                      record-breaking August</a
                     >
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Climate</a
-                    >
-                    5:00 PM
-                  </p>   
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Climate</a
+                      >
+                      5:00 PM
+                    </p>
                   </div>
                 </div>
                 <div class="flex px-1 py-2 border-t md:flex-row-reverse">
@@ -1759,22 +1713,23 @@
                     class="flex-shrink-0 object-cover w-20 h-20 mr-2"
                     src="https://source.unsplash.com/random/246x326"
                   />
-                  <div class="flex flex-col flex-grow">
+                  <div class="flex flex-col flex-grow relative lg:before:absolute lg:before:top-2 lg:before:w-3 lg:before:h-3 lg:before:rounded-full lg:before:left-[-33px] lg:before:z-[1] lg:before:bg-orange-600">
                     <a
                       rel="noopener noreferrer"
                       href="#"
                       class="leading-tight text-lg font-semibold hover:underline"
-                      >Here is a comprehensive review of the 2023 hurricane season</a
+                      >Here is a comprehensive review of the 2023 hurricane
+                      season</a
                     >
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Hurricanes</a
-                    >
-                    1:00 PM
-                  </p>   
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Hurricanes</a
+                      >
+                      1:00 PM
+                    </p>
                   </div>
                 </div>
                 <div class="flex px-1 py-2 border-t md:flex-row-reverse">
@@ -1783,7 +1738,7 @@
                     class="flex-shrink-0 object-cover w-20 h-20 mr-2 bg-gray-500"
                     src="https://source.unsplash.com/random/247x327"
                   />
-                  <div class="flex flex-col flex-grow">
+                  <div class="flex flex-col flex-grow relative lg:before:absolute lg:before:top-2 lg:before:w-3 lg:before:h-3 lg:before:rounded-full lg:before:left-[-33px] lg:before:z-[1] lg:before:bg-orange-600">
                     <a
                       rel="noopener noreferrer"
                       href="#"
@@ -1792,13 +1747,13 @@
                     >
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Glossary</a
-                    >
-                   8:00 AM
-                  </p>   
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Glossary</a
+                      >
+                      8:00 AM
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1806,9 +1761,11 @@
 
             <!-- PRODUCTS & SERVICES LARGE -->
             <div
-              class="container justify-between col-span-12 md:max-w-2xl md:flex md:flex-col  md:col-span-6 md:order-4"
+              class="container justify-between col-span-12 md:max-w-2xl md:flex md:flex-col md:col-span-6 md:order-4"
             >
-              <div class="flex flex-col text-base px-1 border rounded bg-sky-900 border-gray-300 bg-opacity-70">
+              <div
+                class="flex flex-col text-base px-1 border rounded bg-sky-900 border-gray-300 bg-opacity-70"
+              >
                 <div class="flex px-1 py-2">
                   <img
                     alt=""
@@ -1822,17 +1779,21 @@
                       class="leading-tight text-xl font-semibold hover:underline"
                       >Weather Outlook</a
                     >
-                    <p class="pt-1 leading-snug text-gray-200">Showers and thunderstorms associated with a broad area of low pressure
-                      located about 850 miles east of the Windward Islands</p>
+                    <p class="pt-1 leading-snug text-gray-200">
+                      Showers and thunderstorms associated with a broad area of
+                      low pressure located about 850 miles east of the Windward
+                      Islands
+                    </p>
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"d
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Outlook</a
-                    >
-                    8:00 AM
-                  </p> 
+                        rel="noopener noreferrer"
+                        href="#"
+                        d
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Outlook</a
+                      >
+                      8:00 AM
+                    </p>
                   </div>
                 </div>
                 <div class="flex px-1 py-2 border-t">
@@ -1848,17 +1809,20 @@
                       class="leading-tight text-xl font-semibold hover:underline"
                       >Marine Bulletin</a
                     >
-                    <p class="pt-1 leading-snug">Showers and thunderstorms associated with a broad area of low pressure
-                      located about 850 miles east of the Windward Islands.</p>
+                    <p class="pt-1 leading-snug">
+                      Showers and thunderstorms associated with a broad area of
+                      low pressure located about 850 miles east of the Windward
+                      Islands.
+                    </p>
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Marine</a
-                    >
-                    5:00 AM
-                  </p> 
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Marine</a
+                      >
+                      5:00 AM
+                    </p>
                   </div>
                 </div>
                 <div class="flex px-1 py-2 border-t">
@@ -1874,17 +1838,20 @@
                       class="leading-tight text-xl font-semibold hover:underline"
                       >Climate Bulletin</a
                     >
-                    <p class="pt-1 leading-snug">Showers and thunderstorms associated with a broad area of low pressure
-                      located about 850 miles east of the Windward Islands.</p>
+                    <p class="pt-1 leading-snug">
+                      Showers and thunderstorms associated with a broad area of
+                      low pressure located about 850 miles east of the Windward
+                      Islands.
+                    </p>
                     <p class="text-sm">
                       <a
-                      rel="noopener noreferrer"
-                      href="#"
-                      class="uppercase text-orange-400 font-semibold hover:underline pr-1"
-                      >Reports</a
-                    >
-                    8:00 PM
-                  </p> 
+                        rel="noopener noreferrer"
+                        href="#"
+                        class="uppercase text-orange-400 font-semibold hover:underline pr-1"
+                        >Reports</a
+                      >
+                      8:00 PM
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1894,36 +1861,66 @@
             <div
               class="flex flex-col justify-between col-span-12 px-2 pb-2 md:col-span-6 md:order-3"
             >
-
-            <section>
-	<div class="container max-w-5xl mt- px-4 mx-auto">
-				<div class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
-					<div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-orange-600">
-						<h3 class="text-xl font-semibold tracki">Tropical Weather Outlook updated </h3>
-						<time class="text-xs tracki uppercase">8:00 AM</time>
-						<p>Tropical Weather Outlook updated.</p>
-					</div>
-					<div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-orange-600">
-						<h3 class="text-xl font-semibold tracki">Morning Forecast Report issued</h3>
-						<time class="text-xs tracki uppercase">7:00 AM</time>
-						<p>Morning Forecast Report issued.</p>
-					</div>
-					<div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-orange-600">
-						<h3 class="text-xl font-semibold tracki">Marine Bulletin updated</h3>
-						<time class="text-xs tracki uppercase">5:00 AM</time>
-						<p>Marine bulletin updated.</p>
-					</div>
-				</div>
-
-	</div>
-</section>
-
+              <section>
+                <div class="container max-w-5xl mt-2 px-4 mx-auto">
+                  <div
+                    class="col-span-12 space-y-2 relative px-4 sm:col-span-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:bg-gray-300"
+                  >
+                    <div
+                      class="flex flex-col relative before:absolute before:top-2 before:w-3 before:h-3 before:rounded-full before:left-[-33px] before:z-[1] before:bg-orange-600"
+                    >
+                      <h3 class="text-lg font-semibold">
+                        Tropical Weather Outlook updated
+                      </h3>
+                      <time class="text-xs tracki uppercase">8:00 AM</time>
+                      <p class="text-xm">Tropical Weather Outlook updated.</p>
+                    </div>
+                    <div
+                    class="flex flex-col relative before:absolute before:top-2 before:w-3 before:h-3 before:rounded-full before:left-[-33px] before:z-[1] before:bg-orange-600"
+                  >
+                    <h3 class="text-xl font-semibold">
+                      Tropical Weather Outlook updated
+                    </h3>
+                    <time class="text-xs tracki uppercase">8:00 AM</time>
+                    <p>Tropical Weather Outlook updated.</p>
+                  </div>
+                  <div
+                  class="flex flex-col relative before:absolute before:top-2 before:w-3 before:h-3 before:rounded-full before:left-[-33px] before:z-[1] before:bg-orange-600"
+                >
+                  <h3 class="text-xl font-semibold">
+                    Tropical Weather Outlook updated
+                  </h3>
+                  <time class="text-xs tracki uppercase">8:00 AM</time>
+                  <p>Tropical Weather Outlook updated.</p>
+                </div>
+                    <div
+                      class="flex flex-col relative before:absolute before:top-2 before:w-3 before:h-3 before:rounded-full before:left-[-33px] before:z-[1] before:bg-orange-600"
+                    >
+                      <h3 class="text-xl font-semibold">
+                        Morning Forecast Report issued
+                      </h3>
+                      <time class="text-xs tracki uppercase">7:00 AM</time>
+                      <p>Morning Forecast Report issued.</p>
+                    </div>
+                    <div
+                      class="flex flex-col relative before:absolute before:top-2 before:w-3 before:h-3 before:rounded-full before:left-[-33px] before:z-[1] before:bg-orange-600"
+                    >
+                      <h3 class="text-xl font-semibold">
+                        Marine Bulletin updated
+                      </h3>
+                      <time class="text-xs tracki uppercase">5:00 AM</time>
+                      <p>Marine bulletin updated.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </section>
-        </div>
+      </div>
+    </div>
     <!-- FOOTER -->
-    <footer class="bg-sky-900 text-center md:mt-2 lg:mt-4 ">
+    <footer class="bg-sky-900 text-center md:mt-2 lg:mt-4">
       <div
         class="flex flex-col items-center justify-center mx-auto p-5 text-gray-300 text-base"
       >
